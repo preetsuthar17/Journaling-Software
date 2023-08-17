@@ -137,8 +137,8 @@ def close_active_tab():
         
 def on_text_click(event):
     if text_entry.get('1.0', 'end-1c') == 'Write your entry here...':
-        text_entry.delete('1.0', tk.END)  # Remove placeholder text
-        text_entry.config(fg='black')     # Change text color
+        text_entry.delete('1.0', tk.END) 
+        text_entry.config(fg='black')    
 
 root = tk.Tk()
 root.title('Personal Journal')
@@ -147,7 +147,7 @@ root.configure(padx=10, pady=10)
 notebook = ttk.Notebook(root)
 notebook.pack(fill=tk.BOTH, expand=True)
 
-text_entry = tk.Text(root, height=10, width=50)
+text_entry = tk.Text(root, height=10, width=150)
 text_entry.insert('1.0', 'Write your entry here...') 
 text_entry.config(fg='grey') 
 text_entry.bind('<FocusIn>', on_text_click)
